@@ -12,8 +12,8 @@ export function PathPaper(props: { children?: ReactNode }) {
 
   const path = usePathContext().getOrThrow()
 
-  const x = Number(path.url.searchParams.get("x"))
-  const y = Number(path.url.searchParams.get("y"))
+  const x = Number(path.url.searchParams.get("x")) || (innerWidth / 2)
+  const y = Number(path.url.searchParams.get("y")) || (innerHeight / 2)
 
   return <Paper x={x} y={y}>
     {children}

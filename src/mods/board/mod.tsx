@@ -13,8 +13,8 @@ export function PathBoard(props: { children?: ReactNode } & { dark?: boolean }) 
 
   const path = usePathContext().getOrThrow()
 
-  const x = Number(path.url.searchParams.get("x"))
-  const y = Number(path.url.searchParams.get("y"))
+  const x = Number(path.url.searchParams.get("x")) || (innerWidth / 2)
+  const y = Number(path.url.searchParams.get("y")) || (innerHeight / 2)
 
   return <Board x={x} y={y}
     dark={dark}>
