@@ -153,7 +153,7 @@ export function Wall(props: { children?: ReactNode } & { dark?: boolean }) {
     <Portal>
       <div className="absolute inset-0 bg-backdrop data-[state=opening]:animate-opacity-in data-[state=closing]:animate-opacity-out"
         data-state={state} />
-      <div className="fixed inset-0 focus-visible:outline-none flex flex-col *:shrink-0 overflow-y-scroll overscroll-y-none light:scrollbar-light-[white] dark:scrollbar-dark-[black] [scrollbar-gutter:stable] data-[state=opening]:animate-slideup-in data-[state=closing]:animate-opacity-out"
+      <div className="fixed inset-0 focus-visible:outline-none flex flex-col *:shrink-0 overflow-y-scroll overscroll-y-none light:scrollbar-light-[white] dark:scrollbar-dark-[black] data-[state=opening]:animate-slideup-in data-[state=closing]:animate-opacity-out"
         data-state={state}
         data-theme={dark && "dark"}
         onAnimationEnd={onAnimationEnd}

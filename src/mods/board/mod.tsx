@@ -198,7 +198,7 @@ export function Board(props: { children?: ReactNode } & { dark?: boolean } & { x
     <Portal>
       <div className="absolute inset-0 bg-backdrop data-[state=rendering]:opacity-0 data-[state=opening]:animate-opacity-in data-[state=closing]:animate-opacity-out"
         data-state={state} />
-      <div className="fixed inset-0 flex flex-col *:shrink-0 sm:p-6 focus-visible:outline-none overflow-y-scroll sm:overflow-y-hidden data-[state=opened]:sm:overflow-y-scroll overscroll-y-none not-sm:light:scrollbar-light-[white] not-sm:dark:scrollbar-dark-[black] [scrollbar-gutter:stable] data-[state=rendering]:opacity-0 data-[state=opening]:not-sm:animate-slideup-in data-[state=opening]:sm:animate-scale-xywh-in data-[state=closing]:not-sm:animate-opacity-out data-[state=closing]:sm:animate-scale-xywh-out"
+      <div className="fixed inset-0 flex flex-col *:shrink-0 sm:p-6 focus-visible:outline-none overflow-y-scroll overscroll-y-none sm:scrollbar-transparent sm:data-[state=opened]:scrollbar-default-[transparent] not-sm:light:scrollbar-light-[white] not-sm:dark:scrollbar-dark-[black] data-[state=rendering]:opacity-0 data-[state=opening]:not-sm:animate-slideup-in data-[state=opening]:sm:animate-scale-xywh-in data-[state=closing]:not-sm:animate-opacity-out data-[state=closing]:sm:animate-scale-xywh-out"
         data-state={state}
         data-theme={dark && "dark"}
         onAnimationEnd={onAnimationEnd}
