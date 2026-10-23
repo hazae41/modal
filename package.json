@@ -29,14 +29,14 @@
   "devDependencies": {
     "@hazae41/phobos": "^2.0.16",
     "@hazae41/tscousin": "^1.0.28",
-    "@types/react": "^19.2.15",
-    "@types/react-dom": "^19.2.3",
-    "typescript": "^6.0.3"
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2"
   },
   "peerDependencies": {
     "@hazae41/chemin": "^2.1.6",
-    "@hazae41/react-close-context": ">=1.0.3",
-    "react": ">=19.2.6",
-    "react-dom": ">=19.2.6"
+    "@hazae41/react-close-context": ">=1.0.0",
+    "react": ">=19.0.0",
+    "react-dom": ">=19.0.0"
   }
 }
