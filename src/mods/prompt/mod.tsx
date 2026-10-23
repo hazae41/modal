@@ -218,7 +218,7 @@ export function Prompt(props: { children?: ReactNode } & { dark?: boolean } & { 
             {children}
           </div>
         </div>
-        <div className="basis-[10dvh] grow" />
+        <div className="sm:basis-[10dvh] sm:grow" />
       </div>
     </Portal>
   </CloseContext>
