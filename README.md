@@ -17,7 +17,7 @@ https://brume.tech
 You have to use React and Tailwind with [LaBase](https://github.com/hazae41/labase) framework
 
 ```tsx
-import { Board } from "@hazae41/modal"
+import { Window } from "@hazae41/modal"
 import { CloseContext } from "@hazae41/react-close-context"
 
 export function App() {
@@ -33,9 +33,9 @@ export function App() {
 
   return <div>
     {open && <CloseContext close={onClose}>
-      <Board x={open.clientX} y={open.clientY}>
+      <Window x={open.clientX} y={open.clientY}>
           Hello world!
-      </Board>
+      </Window>
     </CloseContext>}
     <button onClick={onOpen}>
       Click me
@@ -47,7 +47,7 @@ export function App() {
 You can also use [Chemin](https://github.com/hazae41/chemin) to use X and Y coords in the URL path
 
 ```tsx
-import { PathBoard } from "@hazae41/modal"
+import { PathWindow } from "@hazae41/modal"
 import { usePathContext, useAnchorWithCoords } from "@hazae41/chemin"
 
 export function App() {
@@ -57,9 +57,9 @@ export function App() {
 
   return <div>
     {path.url.pathname === "/hello" &&
-      <PathBoard>
+      <PathWindow>
         Hello world!
-      </PathBoard>}
+      </PathWindow>}
     <a href={hello.url.href}
       onClick={hello.onClick}
       onKeyDown={hello.onKeyDown}>

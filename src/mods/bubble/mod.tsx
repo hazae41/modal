@@ -7,7 +7,7 @@ import { flushSync } from "react-dom";
 
 React;
 
-export function PathPaper(props: { children?: ReactNode }) {
+export function PathBubble(props: { children?: ReactNode }) {
   const { children } = props
 
   const path = usePathContext().getOrThrow()
@@ -15,17 +15,17 @@ export function PathPaper(props: { children?: ReactNode }) {
   const x = Number(path.url.searchParams.get("x")) || (innerWidth / 2)
   const y = Number(path.url.searchParams.get("y")) || (innerHeight / 2)
 
-  return <Paper x={x} y={y}>
+  return <Bubble x={x} y={y}>
     {children}
-  </Paper>
+  </Bubble>
 }
 
 /**
- * Dialog positioned at some coordinates
+ * Dialog floating at some coordinates
  * @param props 
  * @returns 
  */
-export function Paper(props: { children?: ReactNode } & { x: number, y: number }) {
+export function Bubble(props: { children?: ReactNode } & { x: number, y: number }) {
   const close = useCloseContext().getOrThrow()
   const { children, x, y } = props
 

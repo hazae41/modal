@@ -8,11 +8,11 @@ import { flushSync } from "react-dom"
 React;
 
 /**
- * Dialog that always fills the screen
+ * Full-screen dialog
  * @param props 
  * @returns 
  */
-export function Wall(props: { children?: ReactNode } & { dark?: boolean }) {
+export function Screen(props: { children?: ReactNode } & { dark?: boolean }) {
   const close = useCloseContext().getOrThrow()
   const { dark, children } = props
 

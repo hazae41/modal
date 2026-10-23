@@ -8,7 +8,7 @@ import { flushSync } from "react-dom"
 
 React;
 
-export function PathBoard(props: { children?: ReactNode } & { dark?: boolean }) {
+export function PathWindow(props: { children?: ReactNode } & { dark?: boolean }) {
   const { children, dark } = props
 
   const path = usePathContext().getOrThrow()
@@ -16,18 +16,18 @@ export function PathBoard(props: { children?: ReactNode } & { dark?: boolean }) 
   const x = Number(path.url.searchParams.get("x")) || (innerWidth / 2)
   const y = Number(path.url.searchParams.get("y")) || (innerHeight / 2)
 
-  return <Board x={x} y={y}
+  return <Window x={x} y={y}
     dark={dark}>
     {children}
-  </Board>
+  </Window>
 }
 
 /**
- * Dialog that depends on screen size
+ * Big dialog that appears full-screen on small screens
  * @param props 
  * @returns 
  */
-export function Board(props: { children?: ReactNode } & { dark?: boolean } & { x: number, y: number }) {
+export function Window(props: { children?: ReactNode } & { dark?: boolean } & { x: number, y: number }) {
   const close = useCloseContext().getOrThrow()
   const { dark, children, x, y } = props
 
