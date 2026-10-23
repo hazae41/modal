@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@hazae41/modal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convenient modals for your React webapp",
   "repository": "github:hazae41/modal",
   "author": "hazae41",
