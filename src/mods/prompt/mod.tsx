@@ -43,14 +43,13 @@ export function Prompt(props: { children?: ReactNode } & { dark?: boolean } & { 
    * Restore focus on unmount
    */
   useEffect(() => () => {
+    if (document.activeElement != document.body)
+      return
     if (previous.current == null)
       return
     if (previous.current instanceof HTMLElement === false)
       return
-
-    const element = previous.current
-
-    setTimeout(() => element.focus(), 2)
+    previous.current.focus()
   }, [])
 
   /**
